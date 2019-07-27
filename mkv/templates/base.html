@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="ru-UA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MKV-K</title>
+
+  <script type="text/javascript" src="{% static 'js/jquery3.3.1.js' %}"></script>
+
+{% block head %}
+{% endblock %}
+</head>
+
+<body>
+
+  <main>
+    <header>
+     {% block header %}
+     {% endblock %}
+    </header>
+
+    <article class="main">
+     {% block content %}
+     {% endblock %}
+    </article>
+  </main>
+
+  <footer style="height: 40px; margin-top: 60px;">
+  </footer>
+
+</body>
+</html>

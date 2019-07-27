@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/graphs_style.css' %}">
+  <script type="text/javascript" src="{% static 'js/plotly.min.js' %}"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+
+  <script type="text/javascript" src="{% static 'js/graphs_script.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/stilization.js' %}"></script>
+  <style>
+    .infolayer [class^="y"][class$='title']:nth-child(1) {
+      transform: rotate(0deg) translate(30px, -120px);
+      font-size: 20px !important;
+    }
+  </style>
+{% endblock %}
+
+
+{% block header %}
+  <h1 class="title">MKV-K</h1>
+{% endblock %}
+
+{% block content %}  
+  <div class="buttons_main">
+    <button class="btn_start_main" id="btn_start_main">Run</button>
+    <button class="btn_stop_main" id="btn_start_main">Stop</button>
+  </div>
+  <div id="charts" class="charts">
+    <div id="features">
+      <p class="features">Характеристики: </p>
+      <dl>
+        <dt><b>Матеріал:</b> ДИ-3А (УЗУ)</dt>
+        <dt><b>Зразок:</b> №1</dt>
+        <dt><b>Наруження:</b> <p>&sigma;<sub>н</sub> = <span class="sigma"></p>MПа</dt>
+        <dt><b>Дата:</b> <p class="date"></p></dt>
+        <dt><b>Кількість циклів:</b> N = <p class="num_cycles"></p></dt>
+      </dl>
+    </div>
+  </div>
+{% endblock %}

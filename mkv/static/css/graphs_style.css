@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+h1 {
+    color: green;
+}
+
+.title {
+  text-align: center;
+}
+
+#val {
+  font-size: 18px;
+  color: #a33;
+}
+
+.main {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.charts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.count {
+  display: flex;
+  font-size: 18px;
+  margin-left: 40px;
+}
+
+.count>p:first-child {
+  margin-right: 20px;
+}
+
+.buttons {
+  margin: 0 auto;
+  width: 215px;
+}
+
+.btn_stop, .btn_start {
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  width: 100px;
+  height: 50px;
+  background-color: #a33;
+  /* text-align: center; */
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.btn_stop:hover {
+  box-shadow: 0 0 10px #000;
+  background-color: #900;
+}
+.btn_stop_activate {
+  background-color: #900;
+}
+
+.btn_start {
+  background-color: #3a3;
+  margin-left: 10px;
+}
+
+.btn_start:hover {
+  box-shadow: 0 0 5px #000;
+  background-color: #090;
+}
+
+.btn_start_activate {
+  background-color: #090;
+}
+
+.buttons_main {
+  width: 220px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.btn_stop_main, .btn_start_main {
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  width: 100px;
+  height: 50px;
+  background-color: #0d082c;
+  /* text-align: center; */
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.btn_stop_main {
+  background-color: #140003;
+  margin-left: 15px;
+}
+
+.btn_stop_main_activate {
+  background-color: #4d000e;
+}
+
+.btn_start_main_activate {
+  background-color: #3e26c8;
+}
+
+dl > dt {
+    margin: 15px 0;
+}
+
+dt > p {
+  display: inline;
+}
+
+.features {
+  font-size: 20px;
+}
+
+/* main buttons */
+
+/* .btn_stop_main {}
+
+.btn_stop_main {} */
+
+/* end main buttons */
+
+/* charts  */
+.chart:nth-child(2), #chart_4 {
+  margin-left: 100px;
+}
+
+.chart:nth-child(n+3) {
+  margin-top: 100px;
+}
+
+/* end charts*/
+
+
+footer {
+  background-color: #111;
+}
