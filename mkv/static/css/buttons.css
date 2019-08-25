@@ -1,0 +1,17 @@
+.simple-btn {
+  width: 200px;
+  height: 60px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #33d;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.simple-btn:hover {
+  background: #00a;
+  color: white;
+}

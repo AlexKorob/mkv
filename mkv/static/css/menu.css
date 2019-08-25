@@ -1,0 +1,51 @@
+
+.menu-circle {
+  position: fixed;
+  top: 0px;
+  right: 40px;
+  border-radius: 50%;
+  background-color: #33a;
+  color: white;
+  font-size: 26px;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  width: 20px;
+  height: 28px;
+}
+
+.menu-circle:hover {
+  cursor: pointer;
+  background-color: #228;
+}
+
+.pop-up {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  border: 1px solid #228;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.pop-up a {
+  text-decoration: none;
+  color: blue;
+  margin-top: 20px;
+  font-size: 20px;
+  width: 200px;
+}
+
+.pop-up a:hover {
+  color: #116;
+}
+
+.pop-up div:not(:first-child) {
+  margin-top: 5px;
+}
+
+.pop-up-hide {
+  display: none;
+}

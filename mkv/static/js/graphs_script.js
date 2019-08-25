@@ -21,7 +21,6 @@ $(function() {
     timeoutID = setTimeout(start, 1000);
   }
 
-
   function connectToFirebase() {
     var config = {
         apiKey: "AIzaSyB5LR3UWNDjN4JUPRNjfr0snR4TpRwwsHI",
@@ -31,8 +30,8 @@ $(function() {
         storageBucket: "mkv-kk.appspot.com",
         messagingSenderId: "273816398845"
     };
-
     firebase.initializeApp(config);
+    firebase.auth();
 
     var db = firebase.firestore();
     var docRef = db.collection("data").doc("update");

@@ -1,6 +1,5 @@
 from django.urls import path
-from monitoring import views
-
+from . import views
 
 app_name = "monitoring"
 

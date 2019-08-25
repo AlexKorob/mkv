@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-        
+
     "clients",
     "employees",
     "monitoring",
@@ -105,7 +105,7 @@ AUTH_USER_MODEL = "employees.User"
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Europe/Kiev'
 
@@ -123,9 +123,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 
-
-
 try:
-    from .local_settings import * 
+    from .local_settings import *
 except:
     pass

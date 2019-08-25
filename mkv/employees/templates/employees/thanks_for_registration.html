@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/thanks_for_registration.css' %}">
+<script type="text/javascript">
+
+function redirect(){
+   window.location.href = "/monitoring/";
+}
+
+let timer = 4;
+function oneSecondPass(){
+  let timer_el = document.getElementById("timer");
+  timer_el.innerText = timer;
+  if (timer > 1){
+    timer -= 1;
+  }
+}
+
+$(document).ready(function() {
+  setTimeout(redirect, 5000);
+  setInterval(oneSecondPass, 1000);
+  }
+);
+
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="main">
+  <h2>Вы успешно зарегистрированы, {{ username }}</h2>
+  <p>Вы будете перенаправлены на главную страницу</p>
+  <p>Через</p>
+  <p id="timer">5</p>
+</div>
+{% endblock %}

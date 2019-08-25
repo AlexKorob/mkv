@@ -1,0 +1,14 @@
+.main-container {
+  width: 380px;
+  height: 130px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.start_greeting {
+  text-align: center;
+}

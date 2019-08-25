@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/buttons.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index_page.css' %}">
+{% endblock %}
+
+{% block header %}
+  <div class="start_greeting">
+    <h2>Добро пожаловать на стартовую страницу</h2>
+    <p>Для продолжения работы загеристрируйтесь либо войдите в аккаунт</p>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="main-container">
+    <a href="{% url 'employees:registration' %}" class="simple-btn">Регистрация</a>
+    <a href="{% url 'employees:login' %}" class="simple-btn">Вход</a>
+  </div>
+{% endblock %}

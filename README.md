@@ -21,3 +21,5 @@
   \q
   logout
 ```
+
+#### Create Group (in django-admin) with name: Employees

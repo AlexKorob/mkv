@@ -1,4 +1,8 @@
 venv
 __pycache__
 .env
-
+rsa.py
+priv.key
+pub.key
+SECRET_AUTH_KEY
+command.txt
