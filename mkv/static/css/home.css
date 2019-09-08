@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.top-thick-lile, .bottom-thick-lile {
+  background-color: #333;
+  height: 15vh;
+}
+
+.cards {
+  min-height: calc(100vh - 30vh);
+}

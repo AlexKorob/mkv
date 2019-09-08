@@ -160,12 +160,12 @@ $(function() {
   }
 
   // click on "main stop" button
-  $(document).on("click", ".btn_stop_main", function(e) {
+  $(document).on("click", ".btn_stop_monitoring", function(e) {
     on = false;
   });
 
   // click on "main start" button
-  $(document).on("click", ".btn_start_main", function(e) {
+  $(document).on("click", ".btn_start_monitoring", function(e) {
     on = true;
     start();
   });

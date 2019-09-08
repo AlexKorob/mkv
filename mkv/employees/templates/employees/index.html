@@ -8,14 +8,14 @@
 
 {% block header %}
   <div class="start_greeting">
-    <h2>Добро пожаловать на стартовую страницу</h2>
-    <p>Для продолжения работы загеристрируйтесь либо войдите в аккаунт</p>
+    <h2>Ласкаво просимо на стартову сторінку</h2>
+    <p>Для продовження роботи зареєструйтесь або увiйдiть в аккаунт</p>
   </div>
 {% endblock %}
 
 {% block content %}
   <div class="main-container">
-    <a href="{% url 'employees:registration' %}" class="simple-btn">Регистрация</a>
-    <a href="{% url 'employees:login' %}" class="simple-btn">Вход</a>
+    <a href="{% url 'employees:registration' %}" class="simple-btn">Реєстрація</a>
+    <a href="{% url 'employees:login' %}" class="simple-btn">Увiйти</a>
   </div>
 {% endblock %}

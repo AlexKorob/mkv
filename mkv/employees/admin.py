@@ -1,3 +1,9 @@
 from django.contrib import admin
+from employees.models import User
 
-# Register your models here.
+
+class UserModelAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(User, UserModelAdmin)

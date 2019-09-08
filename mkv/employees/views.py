@@ -104,6 +104,16 @@ class ThanksForRegistration(LoginRequiredMixin, TemplateView):
         return context
 
 
+class ShowOwnInviteKeys(LoginRequiredMixin, TemplateView):
+    raise_exception = True
+    template_name = "employees/my_invite_keys.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["keys"] = InviteKey.objects.filter(user=self.request.user).values_list("key", flat=True)
+        return context
+
+
 @receiver(post_save, sender=get_user_model())
 def add_invited_person_generate_keys(sender, instance=None, created=False, **kwargs):
     if created:
@@ -114,23 +124,3 @@ def add_invited_person_generate_keys(sender, instance=None, created=False, **kwa
         InviteKey.objects.create(user=user_who_gave_key)
         for i in range(3):
             InviteKey.objects.create(user=instance)
-
-
-    # def form_valid(self, form):
-    #     # This method is called when valid form data has been POSTed.
-    #     # It should return an HttpResponse.
-    #     form.send_email()
-    #     return super().form_valid(form)
-
-
-# class Registration(View):
-#     def post(self, request):
-#         bound_form = UserCreateForm(request.POST)
-#
-#         if bound_form.is_valid():
-#             bound_form.save()
-#             user = authenticate(username=bound_form.cleaned_data["username"],
-#                                 password=bound_form.cleaned_data["password2"])
-#             login(request, user)
-#             return HttpResponse("OK")
-#         return HttpResponse(bound_form.errors.as_json())

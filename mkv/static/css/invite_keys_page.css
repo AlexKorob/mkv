@@ -1,0 +1,28 @@
+.block-with-keys {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  white-space: nowrap;
+}
+
+.key {
+  margin-bottom: 10px;
+}
+
+.clippy-wrapper {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid black;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.clippy-wrapper:hover {
+  background-color: #ddd;
+}
+
+.pop-up-hint {
+  opacity: 0;
+  color: #555;
+}

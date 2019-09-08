@@ -10,4 +10,5 @@ urlpatterns = [
     path("login/", views.LogIn.as_view(), name="login"),
     path("logout/", views.LogOut.as_view(), name="logout"),
     path("thanks-for-registration/", views.ThanksForRegistration.as_view(), name="thanks_for_registration"),
+    path("my-invite-kew/", views.ShowOwnInviteKeys.as_view(), name="my_invite_keys"),
 ]

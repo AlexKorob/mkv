@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    color: green;
+    color: #3333aa;
 }
 
 .title {
@@ -43,7 +43,7 @@ h1 {
   width: 215px;
 }
 
-.btn_stop, .btn_start {
+.btn_stop, .btn_start, .btn_reload {
   font-size: 18px;
   font-weight: bold;
   border-radius: 10px;
@@ -79,13 +79,43 @@ h1 {
   background-color: #090;
 }
 
+.monitoring-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.simple-btn {
+  width: 235px;
+  height: 60px;
+  outline: none;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #33d;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.simple-btn:hover {
+  background: #00a;
+  color: white;
+}
+
+.btn_stop_monitoring {
+  margin-left: 20px;
+}
+
 .buttons_main {
-  width: 220px;
+  width: 420px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
 
-.btn_stop_main, .btn_start_main {
+.btn_stop_main, .btn_start_main, .btn_reload_main {
   font-size: 18px;
   font-weight: bold;
   border-radius: 10px;
@@ -97,6 +127,12 @@ h1 {
   cursor: pointer;
   outline: none;
   border: none;
+}
+
+.btn_reload_main {
+  background-color: #2ca02c;
+  width: 175px;
+  margin-left: 15px;
 }
 
 .btn_stop_main {
@@ -146,4 +182,6 @@ dt > p {
 
 footer {
   background-color: #111;
+  height: 40px;
+  margin-top: 60px;
 }

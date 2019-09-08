@@ -49,3 +49,7 @@
 .pop-up-hide {
   display: none;
 }
+
+.menu .pop-up {
+  z-index: 99;
+}

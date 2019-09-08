@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <title>Регистрация</title>
+  <title>Реєстрація</title>
   <style  type="text/css">
     label {
       width: 200px;
@@ -15,31 +15,31 @@
 </head>
 <body>
   <article class="main" style="width: 400px; margin: 0 auto;">
-    <h3 style="text-align: center; margin-bottom: 20px;">Регистрация</h3>
+    <h3 style="text-align: center; margin-bottom: 20px;">Реєстрація</h3>
     <form action="" method="POST">
       {% csrf_token %}
       <div class="alert-danger">{{ form.errors.username }}</div>
-      <label for="id_username">Логин:</label>{{ form.username }}<br>
+      <label for="id_username">Логiн:</label>{{ form.username }}<br>
 
       <div class="alert-danger">{{ form.errors.first_name }}</div>
-      <label for="id_first_name">Ваше имя:</label>{{ form.first_name }}<br>
+      <label for="id_first_name">Ваше iм'я:</label>{{ form.first_name }}<br>
 
       <div class="alert-danger">{{ form.errors.last_name }}</div>
-      <label for="id_last_name">Введите Фамилию:</label>{{ form.last_name }}<br>
+      <label for="id_last_name">Введіть Прізвище:</label>{{ form.last_name }}<br>
 
       <div class="alert-danger">{{ form.errors.email }}</div>
-      <label for="id_email">Введите E-mail:</label>{{ form.email }}<br>
+      <label for="id_email">Введіть E-mail:</label>{{ form.email }}<br>
 
       <div class="alert-danger">{{ form.errors.password2 }}</div>
-      <label for="id_password1">Введите пароль:</label>{{ form.password1 }}<br>
-      <label for="id_password2">Повторите пароль:</label>{{ form.password2 }}<br>
+      <label for="id_password1">Введіть пароль:</label>{{ form.password1 }}<br>
+      <label for="id_password2">Повторіть пароль:</label>{{ form.password2 }}<br>
 
       <div class="alert-danger">{{ form.errors.invite_key }}</div>
-      <label for="id_invite_key" style="margin-right: -3px;">Пригласительный ключ:</label>
+      <label for="id_invite_key" style="margin-right: -3px;">Ключ запрошення:</label>
       <input type="text" name="invite_key" maxlength="150" id="id_invite_key" autocomplete="off"><br>
 
       <div class="text-center" style="margin-top: 20px;">
-        <button type="submit" class="btn btn-primary">Регистрация</button>
+        <button type="submit" class="btn btn-primary">Реєстрація</button>
       </div>
     </form>
   </article>

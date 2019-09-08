@@ -24,10 +24,15 @@
   <h1 class="title">MKV-K</h1>
 {% endblock %}
 
-{% block content %}  
+{% block content %}
   <div class="buttons_main">
-    <button class="btn_start_main" id="btn_start_main">Run</button>
-    <button class="btn_stop_main" id="btn_start_main">Stop</button>
+    <button class="btn_start_main" value="start">Старт</button>
+    <button class="btn_stop_main" value="stop">Стоп</button>
+    <button class="btn_reload_main" value="reload">Перезавантажити</button>
+  </div>
+  <div class="monitoring-buttons">
+    <button class="simple-btn btn_start_monitoring">Вiдновити монiторинг</button>
+    <button class="simple-btn btn_stop_monitoring">Зупинити монiторинг</button>
   </div>
   <div id="charts" class="charts">
     <div id="features">

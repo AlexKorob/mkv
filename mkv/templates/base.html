@@ -24,6 +24,7 @@
           <p class="menu-circle">{{ request.user.username|slice:1 }}</p>
           <div class="pop-up pop-up-hide">
             <div class="home"><a href="{% url 'employees:home' %}">На головну</a></div>
+            <div class="invite-keys-tab"><a href="{% url 'employees:my_invite_keys' %}">Ключi запрошення</a></div>
             <div class="logout"><a href="{% url 'employees:logout' %}">Вийти</a></div>
           </div>
         </div>
@@ -38,7 +39,9 @@
     </article>
   </main>
 
-  <footer style="height: 40px; margin-top: 60px;">
+  <footer>
+    {% block footer %}
+    {% endblock %}
   </footer>
 
 </body>

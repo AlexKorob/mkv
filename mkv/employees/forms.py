@@ -7,7 +7,7 @@ from .models import User, InviteKey
 
 class UserCreateForm(UserCreationForm):
     UserCreationForm.error_messages = {
-        'password_mismatch': "Пароли не совпадают",
+        'password_mismatch': "Паролі не співпадають",
     }
 
     class Meta:
@@ -17,22 +17,22 @@ class UserCreateForm(UserCreationForm):
     def clean_username(self):
         username = self.cleaned_data["username"]
         if User.objects.filter(username=username):
-            error_message = "Этот логин уже существует"
+            error_message = "Цей логін вже існує"
             raise ValidationError(error_message)
         elif len(username) <= 2:
-            error_message = "Логин должен содержать не менее 3-х символов"
+            error_message = "Логін повинен містити не менше 3-х символів"
             raise ValidationError(error_message)
         return username
 
     def clean_first_name(self):
         if len(self.cleaned_data["first_name"]) <= 2:
-            error_message = "Имя должно содержать не менее 3-х символов"
+            error_message = "Ім'я повинно містити не менше 3-х символів"
             raise ValidationError(error_message)
         return self.cleaned_data['first_name']
 
     def clean_last_name(self):
         if len(self.cleaned_data["last_name"]) <= 2:
-            error_message = "Фамилия должна содержать не менее 3-х символов"
+            error_message = "Прізвище повинна містити не менше 3-х символів"
             raise ValidationError(error_message)
         return self.cleaned_data['last_name']
 
@@ -42,4 +42,4 @@ class UserCreateForm(UserCreationForm):
             InviteKey.objects.get(key=invite_key)
             return invite_key
         except ObjectDoesNotExist:
-            raise ValidationError("Пригласительный ключ не действителен")
+            raise ValidationError("Ключ запрошення недійсний")

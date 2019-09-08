@@ -1,12 +1,43 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
+{% block header %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/cards.css' %}">
+
+{% endblock %}
 
 {% block content %}
 <div class="top-thick-lile">
-  
+
 </div>
 
-<div class="down-thick-lile">
+<div class="cards">
+  <div class="card card1">
+    <a href="{% url 'monitoring:monitoring' %}">
+      <img src="{% static 'images/mkv-machine-icon.jpg' %}" alt="mkv">
+      <h3>Машина-1</h3>
+      <!-- <p>The Egyptian pyramids are ancient pyramid-shaped masonry structures located in Egypt. As of November 2008, sources cite either 118 or 138 as the number of identified Egyptian pyramids.</p> -->
+    </a>
+  </div>
+
+  <div class="card card2">
+    <img src="{% static 'images/mkv-machine-icon.jpg' %}" alt="mkv">
+    <h3>Машина-2</h3>
+    <!-- <p>The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor in New York City, in the United States.</p> -->
+  </div>
+
+  <div class="card card3">
+    <img src="{% static 'images/mkv-machine-icon.jpg' %}" alt="mkv">
+    <h3>Машина-3</h3>
+    <!-- <p>The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor.</p> -->
+  </div>
+  <div class="footer">
+  </div>
+</div>
+
+<div class="bottom-thick-lile">
 
 </div>
 

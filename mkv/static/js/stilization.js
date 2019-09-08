@@ -22,6 +22,16 @@ $(function () {
     $(this).parent().find(".btn_stop_main").removeClass("btn_stop_main_activate");
   });
 
+  $(document).on("click", ".btn_stop_monitoring", function () {
+    $(this).addClass("btn_stop_main_activate");
+    $(this).parent().find(".btn_start_monitoring").removeClass("btn_start_main_activate");
+  });
+
+  $(document).on("click", ".btn_start_monitoring", function () {
+    $(this).addClass("btn_start_main_activate");
+    $(this).parent().find(".btn_stop_monitoring").removeClass("btn_stop_main_activate");
+  });
+
   // show date
   let date =  new Date();
   let year = date.getFullYear();
