@@ -100,11 +100,6 @@ h1 {
   cursor: pointer;
 }
 
-.simple-btn:hover {
-  background: #00a;
-  color: white;
-}
-
 .btn_stop_monitoring {
   margin-left: 20px;
 }
@@ -158,6 +153,21 @@ dt > p {
 
 .features {
   font-size: 20px;
+}
+
+.wrapper-notification-after-ajax {
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.notification-after-ajax {
+  color: #3a3;
+  font-size: 20px;
+}
+
+.wrapper-timer {
+  margin-top: 10px;
 }
 
 /* main buttons */

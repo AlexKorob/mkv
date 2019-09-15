@@ -2,6 +2,7 @@ venv
 __pycache__
 .env
 rsa.py
+train_script.js
 priv.key
 pub.key
 SECRET_AUTH_KEY

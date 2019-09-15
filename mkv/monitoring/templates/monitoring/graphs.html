@@ -11,6 +11,7 @@
 
   <script type="text/javascript" src="{% static 'js/graphs_script.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/stilization.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/ajax_send_commands.js' %}"></script>
   <style>
     .infolayer [class^="y"][class$='title']:nth-child(1) {
       transform: rotate(0deg) translate(30px, -120px);
@@ -25,10 +26,14 @@
 {% endblock %}
 
 {% block content %}
+  <div class="wrapper-notification-after-ajax">
+    <code class="notification-after-ajax">HELLO</code>
+    <div class="wrapper-timer">Наступний запит буде можливий через: <span id="timer"></span></div>
+  </div>
   <div class="buttons_main">
-    <button class="btn_start_main" value="start">Старт</button>
-    <button class="btn_stop_main" value="stop">Стоп</button>
-    <button class="btn_reload_main" value="reload">Перезавантажити</button>
+    <button class="btn_start_main main-command" value="start">Старт</button>
+    <button class="btn_stop_main main-command" value="stop">Стоп</button>
+    <button class="btn_reload_main main-command" value="reload">Перезавантажити</button>
   </div>
   <div class="monitoring-buttons">
     <button class="simple-btn btn_start_monitoring">Вiдновити монiторинг</button>
