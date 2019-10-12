@@ -17,9 +17,33 @@ h1 {
   color: #a33;
 }
 
+.preload-wrapper {
+  position: fixed;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-100px) translateY(100px);
+  height: 300px;
+}
+
+.pre-load-img {
+  position: relative;
+  height: 200px;
+  animation: pre-load-img-animation .5s linear infinite;
+}
+
+@keyframes pre-load-img-animation {
+    0% {bottom: 0%;}
+    50% {bottom: 0}
+    100% {bottom: 20%;}
+}
+
 .main {
   width: 1150px;
   margin: 0 auto;
+}
+
+.main-charts-wrapper {
+    opacity: 0;
 }
 
 .charts {
@@ -105,12 +129,18 @@ h1 {
 }
 
 .buttons_main {
-  width: 420px;
+  width: 600px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
 
-.btn_stop_main, .btn_start_main, .btn_reload_main {
+.fall_connection {
+  width: 120px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.btn_stop_main, .btn_start_main, .btn_reload_main, .btn_fall_connection_main {
   font-size: 18px;
   font-weight: bold;
   border-radius: 10px;
@@ -122,6 +152,12 @@ h1 {
   cursor: pointer;
   outline: none;
   border: none;
+}
+
+.btn_fall_connection_main {
+  background-color: #140003;
+  margin-left: 15px;
+  width: 165px;
 }
 
 .btn_reload_main {

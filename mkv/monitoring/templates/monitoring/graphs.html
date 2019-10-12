@@ -26,29 +26,38 @@
 {% endblock %}
 
 {% block content %}
-  <div class="wrapper-notification-after-ajax">
-    <code class="notification-after-ajax">HELLO</code>
-    <div class="wrapper-timer">Наступний запит буде можливий через: <span id="timer"></span></div>
-  </div>
-  <div class="buttons_main">
-    <button class="btn_start_main main-command" value="start">Старт</button>
-    <button class="btn_stop_main main-command" value="stop">Стоп</button>
-    <button class="btn_reload_main main-command" value="reload">Перезавантажити</button>
-  </div>
-  <div class="monitoring-buttons">
-    <button class="simple-btn btn_start_monitoring">Вiдновити монiторинг</button>
-    <button class="simple-btn btn_stop_monitoring">Зупинити монiторинг</button>
-  </div>
-  <div id="charts" class="charts">
-    <div id="features">
-      <p class="features">Характеристики: </p>
-      <dl>
-        <dt><b>Матеріал:</b> ДИ-3А (УЗУ)</dt>
-        <dt><b>Зразок:</b> №1</dt>
-        <dt><b>Наруження:</b> <p>&sigma;<sub>н</sub> = <span class="sigma"></p>MПа</dt>
-        <dt><b>Дата:</b> <p class="date"></p></dt>
-        <dt><b>Кількість циклів:</b> N = <p class="num_cycles"></p></dt>
-      </dl>
+  <div class="preload-wrapper">
+    <div class="pre-load-img">
+      <img src="{% static 'images/logo_dm_ptm.jpg' %}" alt="DM-PTM-image">
     </div>
+  </div>
+  <div class="main-charts-wrapper">
+      <div class="wrapper-notification-after-ajax">
+        <code class="notification-after-ajax">HELLO</code>
+        <div class="wrapper-timer">Наступний запит буде можливий через: <span id="timer"></span></div>
+      </div>
+      <div class="buttons_main">
+        <button class="btn_start_main main-command" value="start">Старт</button>
+        <button class="btn_stop_main main-command" value="stop">Стоп</button>
+        <button class="btn_reload_main main-command" value="reload">Перезавантажити</button>
+        <button class="btn_fall_connection_main main-command" value="reset_sock_connection">Сброс з'єднання</button>
+      </div>
+
+      <div class="monitoring-buttons">
+        <button class="simple-btn btn_start_monitoring">Вiдновити монiторинг</button>
+        <button class="simple-btn btn_stop_monitoring">Зупинити монiторинг</button>
+      </div>
+      <div id="charts" class="charts">
+        <div id="features">
+          <p class="features">Характеристики: </p>
+          <dl>
+            <dt><b>Матеріал:</b> ДИ-3А (УЗУ)</dt>
+            <dt><b>Зразок:</b> №1</dt>
+            <dt><b>Наруження:</b> <p>&sigma;<sub>н</sub> = <span class="sigma"></p>MПа</dt>
+            <dt><b>Дата:</b> <p class="date"></p></dt>
+            <dt><b>Кількість циклів:</b> N = <p class="num_cycles"></p></dt>
+          </dl>
+        </div>
+      </div>
   </div>
 {% endblock %}

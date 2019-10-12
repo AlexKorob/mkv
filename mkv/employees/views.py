@@ -23,14 +23,14 @@ class Index(TemplateView):
         return super().get(self, request, *args, **kwargs)
 
 
-class Home(TemplateView):
+class Home(LoginRequiredMixin, TemplateView):
     template_name = "employees/home_page.html"
 
 
 class LogOut(View):
     def get(self, request):
         logout(request)
-        return HttpResponsePermanentRedirect(reverse_lazy("employees:index"))
+        return HttpResponseRedirect(reverse_lazy("employees:index"))
 
 
 class VerifyEmail(View):

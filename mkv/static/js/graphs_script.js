@@ -42,7 +42,7 @@ $(function() {
 
   function appendGraph(data) {
     var time = new Date();
-    console.log(timestamp_array);
+    // console.log(timestamp_array);
     var update = {
       y: [[data[0]], [data[1]], [data[2]], [data[3]]],
       x: [[time], [time], [time], [time]]
@@ -141,7 +141,12 @@ $(function() {
        scrollZoom: true,
        dragmode: "select",
        selectdirection: "any"});
+      setTimeout(function () {
+        $(".preload-wrapper").css("display","none");
+        $(".main-charts-wrapper").animate({opacity: "1"}, 50);
+      }, 1000);
     });
+    
   }
 
 

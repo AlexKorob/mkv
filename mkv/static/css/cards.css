@@ -11,6 +11,9 @@ a {
 .cards {
   -webkit-transform: perspective(1000px);
   -webkit-transform-style: preserve-3d;
+  min-height: calc(100vh - 30vh);
+  width: 1350px;
+  margin: 0 auto;
 }
 
 .card {

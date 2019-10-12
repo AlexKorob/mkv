@@ -12,6 +12,7 @@
 {% block content %}
 
 <div class="block-with-keys">
+  <div style="margin-bottom: 20px;">Ви були запрошенi користувачем: <b>{{ request.user.invited_by_person.username }}</b> </div>
   <div class="notification">Скопiюйте один з ваших ключiв запрошення, та надiшлiть його новому спiвробiтнику</div>
   <div class="pop-up-hint">
     <p>Ваш ключ скопiйован!</p>
